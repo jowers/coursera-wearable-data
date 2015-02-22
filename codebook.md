@@ -2,23 +2,19 @@
 
 ### Subject.Id
 Identifier of the subjects in the study.
+
 Integer values from 1-30
 
 ### Activity.Label
 The type of activity that the measurement is taken for. Can be one of 6 values:
-WALKING
-WALKING UPSTAIRS
-WALKING DOWNSTAIRS
-SITTING
-STANDING
-LAYING
+* WALKING
+* WALKING UPSTAIRS
+* WALKING DOWNSTAIRS
+* SITTING
+* STANDING
+* LAYING
 
-### Time.Body.Acc.Mean.X
-### Time.Body.Acc.Mean.Y
-### Time.Body.Acc.Mean.Z
-### Time.Body.Acc.Std.X
-### Time.Body.Acc.Std.Y
-### Time.Body.Acc.Std.Z
+### Time.Body.Acc.Mean.X, Time.Body.Acc.Mean.Y, Time.Body.Acc.Mean.Z, Time.Body.Acc.Std.X, Time.Body.Acc.Std.Y, Time.Body.Acc.Std.Z
 The Mean and Standard Deviation for the X, Y and Z axis of the Body Acceleration time domain signals for the Accelerometer,
 
 ### Time.Gravity.Acc.Mean.X
