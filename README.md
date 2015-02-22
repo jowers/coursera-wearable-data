@@ -16,7 +16,7 @@ This project contains a script `run_analysis.R` that takes the data provided abo
 ### Running the script
 Before running the script, you should ensure that you have downloaded the dataset (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) and unzipped it. This will provide you with a directory within your current working directory called `UCI HAR Dataset`. You should then set the location of your current working directory in R using the `setwd()` function.
 
-Once this has been done, you can run `run_analysis.R`. This will output a file called `assignment_table.tab` which contains a 
+Once this has been done, you can run `run_analysis.R`. This will output a file called `assignment_table.tab` which contains a table of tidy data, grouped by subject and activity. The remaining columns of the output dataset consist of the mean of the measurements from the study for each of the pairs of subject and activity.
 
 
 ### What is the script doing?
@@ -50,9 +50,9 @@ Time.Body.Acc.Mean.Y
 Freq.Body.Acc.Mean.Y
 
 #### Summarising the data
-The final step is to summarise the data and save it to a file. TO do this, I'm using the dply package and performing a group by on the combined data set. I can them summarise the data by taking the mean of each measurement, grouped by subject and activity.
+The final step is to summarise the data and save it to a file. To do this, I'm using the dply package and performing a group by on the combined data set. I can them summarise the data by taking the mean of each measurement, grouped by subject and activity.
 
-### TODO - Explanation of Tidy Data
+### Explanation of Tidy Data
 
 From 2.3 in Hadley Wickham's Paper on Tidy Data from the Journal of Statistical Software, MMMMMM YYYY, Volume VV, Issue II, tidy data is described as data where:
 
@@ -61,4 +61,6 @@ From 2.3 in Hadley Wickham's Paper on Tidy Data from the Journal of Statistical 
 3. Each type of observational unit forms a table.
 
 It is also noted in this paper that this is the same as Codd's 3rd normal form, but with the constraints framed in statistical language
+
+I've not made any attempt to combine data measurements, which means that the output data I've produced meets point one of the description. For point 2, the observations asked for in the exercise are the means of each recording, grouped by subject and activity. My data set contains one row for each of the combinations of subject and activity, which meets this description. The third point is a wider point regarding the data set, and I believe is met by the orginal study, and hence by my dataset.
 
