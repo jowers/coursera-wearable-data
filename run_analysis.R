@@ -81,4 +81,4 @@ names(combined) <- gsub("([a-z])([A-Z])", "\\1.\\2", names(combined))
 # Now summarise the data
 summ <- group_by(combined, Subject.Id, Activity.Label)
 table_of_data <- summ %>% summarise_each(funs(mean))
-write.table(table_of_data, file="assignment_table.tab")
+write.table(table_of_data, file="assignment_table.txt", row.name=FALSE)
