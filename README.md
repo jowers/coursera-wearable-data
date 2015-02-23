@@ -49,6 +49,8 @@ In my tidied dataset, these column headings become:
 Time.Body.Acc.Mean.Y
 Freq.Body.Acc.Mean.Y
 
+It is also worth noting that the magnitude column names for the Frequency measurements contained a duplicate "Body" (e.g. Freq.Body.Body.Gyro.Mag.Mean). I also remove the duplicate Body.
+
 #### Summarising the data
 The final step is to summarise the data and save it to a file. To do this, I'm using the dply package and performing a group by on the combined data set. I can them summarise the data by taking the mean of each measurement, grouped by subject and activity.
 

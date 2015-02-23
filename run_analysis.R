@@ -75,8 +75,11 @@ names(combined) <- gsub("\\(\\)", "", names(combined))
 names(combined) <- gsub("-m", "M", names(combined))
 names(combined) <- gsub("-s", "S", names(combined))
 names(combined) <- gsub("-(X|Y|Z)", "\\1", names(combined))
-# Finally, separate words by a full stop
+# Separate words by a full stop
 names(combined) <- gsub("([a-z])([A-Z])", "\\1.\\2", names(combined))
+# There is some data that is named incorrectly in the original data - remove
+# duplicate Bodys
+names(combined) <- gsub("Body.Body", "Body", names(combined))
 
 # Now summarise the data
 summ <- group_by(combined, Subject.Id, Activity.Label)
